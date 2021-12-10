@@ -62,7 +62,6 @@ img{
     font-weight: bold;
     margin-left: 5px
 }
-/* End colonna left */
 
 /* modifico colonna right */
 .profile-col-right{
@@ -78,8 +77,31 @@ i{
 /* End colonna right */
 
 /* Main list col left */
+/* silenzia notifiche */
+.silence-notifications-row{
+    height: 90px;
+    background-color: #8edafb;
+}
+.notification-off{
+    display: inline-block;
+    background-color: white;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.bell{
+    position: absolute;
+    color: #8edafb;
+    left: 14px;
+}
+/* End silenzia notifiche */
+/* End main list col left */
 
-
+/* End colonna left */
 
 
 
