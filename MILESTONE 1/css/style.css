@@ -3,6 +3,10 @@
     padding: 0;
     box-sizing: border-box;
 }
+img{
+    width: 100%;
+}
+/* Struttura principale */
 .main{
     width: 100%;
     height: calc(100vh);
@@ -23,7 +27,7 @@
    width: 30%;
    height: 100%;
    
-   background-color: cornflowerblue;
+   background-color: white;
 }
 .col-right{
     position: absolute;
@@ -32,4 +36,57 @@
     width: 70%;
     height: 100%;
     background-color: darkblue;
+}
+/* Fine struttura principale */
+
+/* modifico colonna left */
+.row{
+    background-color: #eaeaea;
+    display: flex;
+    justify-content: space-between;
+}
+.profile-col-left{
+    display: flex;
+    align-items: center;
+    height: 90px;
+}
+.img-profile{
+    width: 70px;
+    height: 70px;
+    margin-left: 10px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+.nickname-profile{
+    font-size: 20px;
+    font-weight: bold;
+    margin-left: 5px
+}
+/* End colonna left */
+
+/* modifico colonna right */
+.profile-col-right{
+    float: right;
+    display: flex;
+    align-items: center;
+}
+i{
+    width: 40px;
+    font-size: 25px;
+    color: lightslategray;
+}
+/* End colonna right */
+
+/* Main list col left */
+
+
+
+
+
+
+/* 
+colonna principale right bordo
+*/
+.col-right{
+    border-left: 1px solid gray;
 }
