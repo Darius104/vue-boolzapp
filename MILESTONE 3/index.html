@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+
+    <title>Document</title>
+</head>
+<body>
+    <div id="root">
+        <div class="main">
+            <div class="main-box">
+
+                <!-- Colonna principale left -->
+                <div class="col-left">
+                    <div class="profile">
+
+                        <!-- row della colonna left 'profile' -->
+                        <div class="row">
+
+                            <!-- col left -->
+                            <div class="profile-col-left">
+                                <div class="img-profile">
+                                    <img src="img/avatar_io.jpg" alt="your profile image">
+                                </div>
+                                <div class="nickname-profile">
+                                    Gianfranca
+                                </div>
+                            </div>
+
+                            <!-- col right -->
+                            <div class="profile-col-right">
+                                <div class="icons">
+                                    <i class="fas fa-circle-notch"></i>
+                                    <i class="fas fa-comment-alt"></i>
+                                    <i class="fas fa-ellipsis-v"></i>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+                    <div class="silence-notifications-row">
+                        <div class="notification-off">
+                            <i class="fas fa-bell-slash bell"></i>
+                        </div>
+                        <div class="notification-text">
+                            Ricevi notifiche di nuovi messaggi <br>
+                            <span id="notifiche-desktop">Attiva notidiche desktop</span>
+                        </div>
+                    </div>
+                    
+                    <div class="input-box">
+                        <input type="text" class="cerca" placeholder="Cerca">
+                    </div>
+
+                    <div class="list-chats">
+                        <ul>
+                            <li>
+                                <div class="main-row">
+                                    <ul>
+                                        <li v-for="(element, index) in contacts">
+                                            <div class="contatto" :class="element.attivo ? 'contatto-attivo' :'contatto-non-attivo'" @click="cambiaStato(element, index)">
+                                                <img class="img-profile" :src="'img/avatar' + element.avatar + '.jpg'"  alt="img">
+                                                <span>{{ element.name }}</span>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+
+                <!-- Colonna principale right -->
+                <div class="col-right">
+                    <div class="profile">
+
+                        <!-- row della colonna left 'profile' -->
+                        <div class="row">
+
+                            <!-- profile col-right -->
+                            <div class="profile-col-left">
+                                <div class="img-profile">
+                                    <img :src="'img/avatar' + contacts[indice].avatar + '.jpg'"  alt="img" alt="your profile image">
+                                </div>
+                                <div class="nickname-profile">
+                                    <span>{{ contacts[indice].name }}</span>
+                                </div>
+                            </div>
+
+                            <!-- col right icons -->
+                            <div class="profile-col-right">
+                                <div class="icons">
+                                    <i class="fas fa-search icons"></i>
+                                    <i class="fas fa-paperclip icons"></i>
+                                    <i class="fas fa-ellipsis-v icons"></i>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <!-- :class="element.status === 'received' ? 'received' :'sent'" -->
+
+                    <!-- Sezone messaggi -->
+                    <div class="messaggi">
+                        <div v-for="element in contacts[indice].messages" class="contenitore-messaggi">
+                            <div :class="element.status === 'received' ? 'received' :'sent'">
+                                <span :class="(element.status === 'received' ? 'color-received':'color-sent') + ' message'">{{ element.text }}
+                                    <div class="_date">
+                                        {{ element.date }}
+                                    </div>
+                                </span>
+                                
+                            </div>
+                           
+                            
+
+                        </div>
+                    </div>
+                    <!-- END Sezione messaggi -->
+
+                    <!-- sezione scrivi messaggi -->
+                    <div class="row-msg">
+                        <i class="far fa-smile"></i>
+                        <input class="input-text" type="text" placeholder=" Scrivi..."></li>
+                        <i class="fas fa-microphone"></i>
+                    </div>
+                    <!-- END sezione scrivi messaggi -->
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    
+    <script type="text/javascript" src="js/script.js"></script>
+</body>
+</html>

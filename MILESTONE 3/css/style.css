@@ -1,0 +1,209 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+img{
+    width: 100%;
+}
+/* Struttura principale */
+.main{
+    width: 100%;
+    height: calc(100vh);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-image: linear-gradient(#009688, #D5DBD9);
+}
+.main-box{
+    position: relative;
+    width: 75%;
+    height: 90%;
+}
+.col-left{
+   width: 30%;
+   height: 100%;
+   
+   background-color: white;
+}
+.col-right{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 70%;
+    height: 100%;
+    background-image: url('../img/mine.jpg');
+}
+/* Fine struttura principale */
+
+/* Colonna principale left*/
+.row{
+    background-color: #eaeaea;
+    display: flex;
+    justify-content: space-between;
+}
+.profile-col-left{
+    display: flex;
+    align-items: center;
+    height: 90px;
+}
+.img-profile{
+    width: 70px;
+    height: 70px;
+    margin-left: 10px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+.nickname-profile{
+    font-size: 20px;
+    font-weight: bold;
+    margin-left: 5px
+}
+/* Main list col left */
+/* silenzia notifiche */
+.silence-notifications-row{
+    height: 90px;
+    background-color: #8edafb;
+    display: flex;
+    align-items: center;
+    padding-left: 15px;
+}
+.notification-off{
+    display: inline-block;
+    background-color: white;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin-right: 10px;
+}
+.bell{
+    position: absolute;
+    color: #8edafb;
+    left: 14px;
+}
+#notifiche-desktop{
+    text-decoration: underline;
+    color: gray;
+}
+/* End silenzia notifiche */
+/* Search bar */
+.input-box{
+    display: flex;
+    justify-content: center;
+    margin: 10px 0;
+}
+.cerca{
+    padding-left: 25px;
+    background: url("https://static.thenounproject.com/png/101791-200.png") no-repeat;
+    background-size: 20px;
+    height: 25px;
+    width: 90%;
+    margin: auto;
+}
+/* End Search bar */
+ul{
+    list-style-type: none;
+}
+.contatto-attivo{
+    background-color: lightgray;
+}
+.contatto-non-attivo{
+    background-color: white;
+}
+.contatto{
+    display: flex;
+    font-weight: bold;
+    border-bottom: 1px solid lightgray;
+    padding-bottom: 5px;
+    padding-top: 14px;
+    cursor: pointer;
+}
+/* End main list col left */
+/* End colonna principale left */
+
+
+/* Colonna principale right */
+/* 
+colonna principale right bordo
+*/
+.profile-col-right{
+    float: right;
+    display: flex;
+    align-items: center;
+}
+i{
+    width: 40px;
+    font-size: 25px;
+    color: lightslategray;
+}
+.col-right{
+    border-left: 1px solid gray;
+}
+
+/* messaggi */
+.messaggi{
+    width: 100%;
+}
+.contenitore-messaggi{
+    margin-right: 20px;
+    margin-left: 20px;
+    padding: 10px;
+    width: 90%;
+    margin: auto;
+}
+._date{
+    display: flex;
+    justify-content: flex-end;
+    color: lightgray;
+    font-weight: normal;
+    margin-top: 5px;
+}
+.sent{
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+}
+.received{
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+}
+.message{
+    font-weight: bold;
+    border-radius: 15px;
+    width: 350px;
+    padding: 10px 10px;
+}
+.color-sent{
+    background-color: #d5f9ba;
+}
+.color-received{
+    background-color: white;
+}
+/* End messaggi */
+
+/* Sezione scrivi mess */
+.row-msg{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 90px;
+    background-color: #eaeaea;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-content: space-around;
+}
+.input-text{
+    width: 70%;
+    height: 70%;
+    border-radius: 10px;
+    border: none;
+}
+/* End Sezione scrivi mess */
+/* End colonna principale right */
