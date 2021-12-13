@@ -65,7 +65,7 @@
                                 <div class="main-row">
                                     <ul>
                                         <li v-for="(element) in contacts">
-                                            <div class="contatto">
+                                            <div class="contatto" :class="element.attivo ? 'contatto-attivo' :'contatto-non-attivo'" @click="cambiaStato(element)">
                                                 <img class="img-profile" :src="'img/avatar' + element.avatar + '.jpg'"  alt="img">
                                                 <span>{{ element.name }}</span>
                                             </div>

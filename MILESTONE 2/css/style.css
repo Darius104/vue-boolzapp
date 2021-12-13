@@ -109,12 +109,19 @@ img{
 ul{
     list-style-type: none;
 }
+.contatto-attivo{
+    background-color: lightgray;
+}
+.contatto-non-attivo{
+    background-color: white;
+}
 .contatto{
     display: flex;
     font-weight: bold;
     border-bottom: 1px solid lightgray;
     padding-bottom: 5px;
-    margin-top: 14px;
+    padding-top: 14px;
+    cursor: pointer;
 }
 /* End main list col left */
 /* End colonna principale left */
@@ -124,9 +131,6 @@ ul{
 /* 
 colonna principale right bordo
 */
-.profile{
-    margin-bottom: 30px;
-}
 .profile-col-right{
     float: right;
     display: flex;
