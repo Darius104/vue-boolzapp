@@ -64,8 +64,8 @@
                             <li>
                                 <div class="main-row">
                                     <ul>
-                                        <li v-for="(element) in contacts">
-                                            <div class="contatto" :class="element.attivo ? 'contatto-attivo' :'contatto-non-attivo'" @click="cambiaStato(element)">
+                                        <li v-for="(element, index) in contacts">
+                                            <div class="contatto" :class="element.attivo ? 'contatto-attivo' :'contatto-non-attivo'" @click="cambiaStato(element, index)">
                                                 <img class="img-profile" :src="'img/avatar' + element.avatar + '.jpg'"  alt="img">
                                                 <span>{{ element.name }}</span>
                                             </div>
@@ -88,10 +88,10 @@
                             <!-- profile col-right -->
                             <div class="profile-col-left">
                                 <div class="img-profile">
-                                    <img src="img/avatar_3.jpg" alt="your profile image">
+                                    <img :src="'img/avatar' + contacts[indice].avatar + '.jpg'"  alt="img" alt="your profile image">
                                 </div>
                                 <div class="nickname-profile">
-                                    <span>Samuele</span>
+                                    <span>{{ contacts[indice].name }}</span>
                                 </div>
                             </div>
 
@@ -112,7 +112,7 @@
 
                     <!-- Sezone messaggi -->
                     <div class="messaggi">
-                        <div v-for="element in contacts[2].messages" class="contenitore-messaggi">
+                        <div v-for="element in contacts[indice].messages" class="contenitore-messaggi">
                             <div :class="element.status === 'received' ? 'received' :'sent'">
                                 <span :class="(element.status === 'received' ? 'color-received':'color-sent') + ' message'">{{ element.text }}
                                     <div class="_date">

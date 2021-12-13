@@ -96,11 +96,12 @@ const app = new Vue({
         
     },
     methods: {
-        cambiaStato: function(element){
+        cambiaStato: function(element, indice){
             for(let i = 0; i < this.contacts.length; i++){
                 this.contacts[i].attivo = false;
             }
             element.attivo = !element.attivo;
+            this.indice = indice;
         }
     }
 });
