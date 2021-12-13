@@ -131,7 +131,7 @@
                     <!-- sezione scrivi messaggi -->
                     <div class="row-msg">
                         <i class="far fa-smile"></i>
-                        <input class="input-text" type="text" placeholder=" Scrivi..."></li>
+                        <input v-model="contacts[indice].msg" v-on:keyup.enter="enter" class="input-text" type="text" placeholder=" Scrivi..."></li>
                         <i class="fas fa-microphone"></i>
                     </div>
                     <!-- END sezione scrivi messaggi -->

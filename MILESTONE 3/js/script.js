@@ -10,6 +10,7 @@ const app = new Vue({
                 avatar: '_1',
                 visible: true,
                 attivo: false,
+                msg: '',
                 messages: [
                     {
                         date: '10/01/2020 15:30:55',
@@ -33,6 +34,7 @@ const app = new Vue({
                 avatar: '_2',
                 visible: true,
                 attivo: false,
+                msg: '',
                 messages: [
                     {
                         date: '20/03/2020 16:30:00',
@@ -56,6 +58,7 @@ const app = new Vue({
                 avatar: '_3',
                 visible: true,
                 attivo: false,
+                msg: '',
                 messages: [
                     {
                         date: '28/03/2020 10:10:40',
@@ -79,6 +82,7 @@ const app = new Vue({
                 avatar: '_4',
                 visible: true,
                 attivo: false,
+                msg: '',
                 messages: [
                     {
                         date: '10/01/2020 15:30:55',
@@ -102,6 +106,25 @@ const app = new Vue({
             }
             element.attivo = !element.attivo;
             this.indice = indice;
+        },
+        enter: function(){
+            nuovoMessaggio = {
+                date: '10/10/10',
+                text: this.contacts[this.indice].msg,
+                status: 'sent'
+            }
+            this.contacts[this.indice].messages.push(nuovoMessaggio);
+            this.contacts[this.indice].msg = '';
+
+            botMsg = {
+                date: '10/10/10',
+                text: 'ok',
+                status: 'received'
+            }
+            setTimeout(() =>{
+                console.log(botMsg)
+                this.contacts[this.indice].messages.push(botMsg);
+           }, 1000);
         }
     }
 });
