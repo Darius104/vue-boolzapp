@@ -90,6 +90,9 @@ img{
     text-decoration: underline;
     color: gray;
 }
+.list-chats{
+    overflow-y: auto;
+}
 /* End silenzia notifiche */
 /* Search bar */
 .input-box{

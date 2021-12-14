@@ -56,26 +56,19 @@
                     </div>
                     
                     <div class="input-box">
-                        <input type="text" class="cerca" placeholder="Cerca">
+                        <input  type="text" class="cerca" placeholder="Cerca">
                     </div>
 
                     <div class="list-chats">
                         <ul>
-                            <li>
-                                <div class="main-row">
-                                    <ul>
-                                        <li v-for="(element, index) in contacts">
-                                            <div class="contatto" :class="element.attivo ? 'contatto-attivo' :'contatto-non-attivo'" @click="cambiaStato(element, index)">
-                                                <img class="img-profile" :src="'img/avatar' + element.avatar + '.jpg'"  alt="img">
-                                                <span>{{ element.name }}</span>
-                                            </div>
-                                        </li>
-                                    </ul>
+                            <li v-for="(element, index) in contacts">
+                                <div class="contatto" :class="element.attivo ? 'contatto-attivo' :'contatto-non-attivo'" @click="cambiaStato(element, index)">
+                                    <img class="img-profile" :src="'img/avatar' + element.avatar + '.jpg'"  alt="img">
+                                    <span>{{ element.name }}</span>
                                 </div>
                             </li>
                         </ul>
                     </div>
-
                 </div>
 
                 <!-- Colonna principale right -->

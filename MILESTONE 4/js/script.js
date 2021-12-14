@@ -3,6 +3,7 @@ Vue.config.devtools = true;
 const app = new Vue({
     el: '#root',
     data: {
+        searchName: '',
         indice: 0,
         contacts: [
             {
